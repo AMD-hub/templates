@@ -1,0 +1,101 @@
+% amdresume.sty
+% Style file for customizing LaTeX documents
+
+\ProvidesPackage{amdresume}[2024/09/08 Custom style for resumes]
+
+%%%%%%% Document + geometry:
+\RequirePackage[a4paper]{geometry}
+\geometry{
+    a4paper,
+    top     = 0.5cm,
+    bottom  = 0.5cm,
+    right   = 0.5cm,
+    left    = 0.5cm
+}
+
+%%%%%%% Colors:
+\RequirePackage{xcolor}
+\definecolor{colorr}{HTML}{3a6358}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows}
+
+%%%%%%% Itemize or description
+\RequirePackage{enumitem}
+\setlist[itemize]{
+    noitemsep,
+    left=0pt..1.5em
+}
+\setlist[description]{itemsep=0pt}
+\setlist[enumerate]{align=left}
+
+% % %%%%%%% Fonts
+% \RequirePackage{fontspec} % Font selection
+% % \setmainfont{Times New Roman} 
+
+% \setmainfont{texgyrepagella-regular.otf}[
+% BoldFont = texgyrepagella-bold.otf ,
+% ItalicFont = texgyrepagella-italic.otf ,
+% BoldItalicFont = texgyrepagella-bolditalic.otf ]
+
+% \RequirePackage{polyglossia}   
+% \RequirePackage{bidi} % Bidirectional text support
+
+
+
+%%%%%%% Adjust spacing
+\RequirePackage{setspace} % Line spacing
+\setlength{\parskip}{0em} % Space between paragraphs
+\setlength{\itemsep}{0em} % Space between items in a list
+\setlength{\parsep}{0em} % Space between paragraphs within an item
+\setlength{\partopsep}{0em} % Extra space added to \topsep when environment starts a new paragraph
+\setlength{\topsep}{0em} % Space between first list item and preceding paragraph
+\setlength{\baselineskip}{0em} % Space between lines
+
+%%%%%%% Sections + numbering 
+\setcounter{secnumdepth}{0} % Remove section numbering
+\pagenumbering{gobble} % Remove page numbers
+
+\RequirePackage{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+
+\newcommand\ruleafter[1]{#1 \hfill \textcolor{colorr}{\rule[2pt]{0.75\textwidth}{0.5mm}}}
+
+\RequirePackage{xhfill} 
+% \newcommand\ruleafter[1]{#1 \hspace{0.5cm} \xrfill[0.15cm]{2pt}[colorr]} % Add rule after title in .5 x-height 
+
+
+
+
+% ===================== Section formatting =====================
+\titleformat{\section}
+  {\Large\bfseries\uppercase} % formatting
+  {}                          % label
+  {}                          % sep
+  {\ruleafter}                % before-code
+  []                          % after-code
+
+% ===================== Subsection formatting =====================
+\titleformat{\subsection}
+  {\large\bfseries}           % formatting
+  {}                          % label
+  {0pt}                       % sep
+  {\ruleafter}      % content with safe wrapper + your design
+  []
+
+% ===================== Subsubsection formatting =====================
+\titleformat{\subsubsection}
+  {\large\itshape}            % formatting
+  {}                          % label
+  {0pt}                       % sep
+  {\ruleafter}      % content with safe wrapper + your design
+  []
+
+
+%%%%%%% Random packages
+\RequirePackage{graphicx} % Graphics support
+\RequirePackage{multicol} % Multiple columns
+\RequirePackage{hyperref} % Hyperlinks
+\RequirePackage{fontawesome} % Icons

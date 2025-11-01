@@ -1,0 +1,12 @@
+1. Put your .sty or .cls there:
+cp /path/to/file ~/texmf/tex/latex/mytemplates/
+ex1 :  cp CV template 1col/amdresume.sty ~/texmf/tex/latex/mytemplates/
+ex2 :  cp CV_template_2cols/altacv.cls   ~/texmf/tex/latex/mytemplates/
+ex2 :  cp Rapport_template/insea.cls   ~/texmf/tex/latex/mytemplates/
+
+ex0 :  cp templates/Rapport_template/insea.cls   ~/texmf/tex/latex/mytemplates/
+
+
+2. Update TeX Live file database:
+texhash ~/texmf
+

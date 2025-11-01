@@ -1,0 +1,164 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage{skak}
+\usepackage{paracol}
+
+\geometry{left=0.3cm,right=0.3cm,top=0.6cm,bottom=0.6cm,columnsep=0.75cm}
+
+% ======= Costumize Colors
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{C69749}
+  \definecolor{SecondaryColor}{HTML}{D49B54}
+  \definecolor{ThirdColor}{HTML}{1877E8}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABABAB}
+  \definecolor{BackgroundColor}{HTML}{191919}
+\else%
+  \definecolor{PrimaryColor}{HTML}{242f2d}
+  \definecolor{SecondaryColor}{HTML}{5a6771}
+  \definecolor{ThirdColor}{HTML}{00a885}
+  \definecolor{BodyColor}{HTML}{666666}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{RGB}{255, 255, 255}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{ThirdColor!80!black}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor!80!black}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{ThirdColor!80!black}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+% ======= Costumize fonts 
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+    \name{Doe Anonymous}
+    \tagline{INGÉNIEUR EN ACTUARIAT}
+    \photoL{4cm}{anonymous}
+    \personalinfo{
+    \begin{tabular}{lll}
+    \birth{01 jan 2000}
+         &  \phone{+000\ 000-000000} & \location{Ville, Pays}\\
+         \email{anonymous@email.com} &
+         \linkedin{Profil LinkedIn} & \github{github-user} 
+    \end{tabular}
+    }
+    \makecvheader
+    \columnratio{0.3}
+    \begin{paracol}{2}
+
+\cvsection{Langues}
+    \begin{tabular}{lcl}
+      \textbf{Arabe}     &  : & \textit{Native} \\
+      \textbf{Français}  &  : & \textit{Avancé} \\
+      \textbf{Anglais}   &  : & \textit{Intermédiaire} \\
+    \end{tabular}
+
+\vspace{12pt}
+\cvsection{Compétences}
+\cvachievement{\faIcon{calculator}}{Actuariat}{
+    Assurance non vie, Assurance vie, Retraite, Prévoyance, Épargne, Réassurance, ALM, Solvabilité, IFRS 17. 
+    }
+\divider\\
+    \cvachievement{\faIcon{chart-area}}{Finance}{
+            Optimisation de portefeuilles, Produits dérivés, Courbe des taux, Calcul stochastique, Méthodes numériques. 
+    }
+\divider \\
+    \cvachievement{\faConnectdevelop}{Statistiques}{ 
+    Séries temporelles, Analyse de données, Modèles linéaires généralisés. 
+    }
+
+\divider\\
+\cvachievement{\faCode}{Langages et Programmation}{
+ R, SAS, VBA, SQL, Python, C++. 
+}
+
+\cvsection{Soft Skills}
+\cvtag{Travail d'équipe}
+\cvtag{Gestion du temps}
+\cvtag{Autonomie}
+\cvtag{Fiabilité}
+\cvtag{Adaptabilité}
+\cvtag{Rigueur} \cvtag{Esprit critique} 
+
+\cvsection{Loisirs}
+\cvachievement{\faChessQueen}{Échecs}{Développement de la stratégie et de la réflexion critique.}
+\divider \\ 
+\cvachievement{\faBook}{Lecture}{Enrichissement personnel et curiosité intellectuelle.}
+\divider\\ 
+\cvachievement{\faTv}{Cinéma}{Appréciation du cinéma comme art d'émotion et de réflexion.}
+
+% MAIN COLUMN
+\newpage
+\switchcolumn
+
+\cvsection{Expérience}
+\cvevent{Actuaire non vie }{Société d'Assurance X}{01 2025 -- présent}{Ville, Pays}
+\begin{itemize}
+       \item Élaboration de reporting techniques. 
+       \item Construction et maintenance de tarifs d’assurance auto.
+\end{itemize}
+\medskip
+\cvevent{Stagiaire actuaire vie }{Compagnie Y}{02 2024 -- 08 2024}{Ville, Pays}
+\begin{itemize}
+       \item Application de la norme IFRS 17 sur un portefeuille de prévoyance. 
+       \item Calcul du Best Estimate, Risk Adjustment et Contractual Service Margin. 
+\end{itemize}
+\medskip
+\cvevent{Consultant actuaire }{Cabinet Z}{07 2023 -- 09 2023}{Ville, Pays}
+\begin{itemize}
+    \item Développement d’un outil automatisé d’analyse des provisions techniques.
+    \item Application des méthodes Chain Ladder, GLM, Mack. 
+\end{itemize}
+
+\cvsection{Projets} 
+    \cvachievement{\faIcon{calculator}}{Actuariat}{
+        \begin{itemize}
+            \item Développement d’une librairie Python pour le calcul de provisions. 
+            \item Tarification automobile sous SAS.
+            \item Ajustement de la distribution des sinistres via des lois de probabilité.
+        \end{itemize}
+    }
+\cvachievement{\faIcon{chart-area}}{Finance de marché}{
+        \begin{itemize}
+            \item Calibration d’un modèle HJM pour courbes de taux. 
+            \item Optimisation de portefeuille sous R et création d’une application Shiny. 
+            \item Pricing d’options asiatiques via Monte Carlo et différences finies sous C++.
+        \end{itemize}
+    }
+
+\cvsection{Éducation}
+\cvevent{Ingénieur en Actuariat et Finance de Marché }{École d’Ingénieurs Statistiques}{10 2021 -- 08 2024}{Ville, Pays}
+\begin{itemize}
+    \item Statistique, mathématiques actuarielles et finance de marché.
+    \item Participation à des compétitions de programmation.
+\end{itemize}
+\medskip
+\cvevent{Mathématiques et Physique}{CPGE : Lycée Scientifique}{10 2019 -- 06 2021}{Ville, Pays}
+\begin{itemize}
+    \item Mathématiques, programmation Python et physique.
+    \item Mention Très Bien.
+\end{itemize}
+
+    \end{paracol}
+\end{document}

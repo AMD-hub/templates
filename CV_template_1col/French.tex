@@ -1,0 +1,111 @@
+\documentclass[main.tex]{subfiles}
+
+
+\begin{document}
+
+\begin{minipage}[c]{0.20\textwidth}
+\begin{tikzpicture}
+    \node at (0,0) [draw=colorr, fill=colorr, line width=2pt, circle, minimum width=\linewidth, path picture={
+        \node at (path picture bounding box.center) {\includegraphics[width=\linewidth]{\photoLink}};
+    }] {};
+\end{tikzpicture}
+
+\end{minipage}
+\vspace{10pt}
+\hfill
+\begin{minipage}[c]{0.78\textwidth}
+\begin{itemize}[itemsep=0.2cm, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item[] \textbf{\Huge{ \textbf{\uppercase{\Name}}}}
+    \item[] \textbf{\Huge{ \textbf{\uppercase{\job}}}}
+\end{itemize}
+\hspace{1cm}
+
+\begin{tabular}{rlrlrl}
+    \textcolor{colorr}{\faPhone} & \textbf{\phoneNumber} &
+    \textcolor{colorr}{\faGithub} &       \textbf{\githubName} &
+    \textcolor{colorr}{\faMapMarker} & \textbf{\locationFr} \\
+    \textcolor{colorr}{\faAt} & \href{\email}{\textbf{\email}} &
+    \textcolor{colorr}{\faLinkedin} & \href{\linkedinLink}{\textbf{\linkedinName}} &     \textcolor{colorr}{\faBirthdayCake} & \textbf{\birthdayDate} 
+\end{tabular}
+
+\end{minipage}
+
+\section{À PROPOS}
+Diplômé en finance quantitative, spécialisé en modélisation statistique et méthodes de pricing, risque management et stratégies de trading, je cherche une première opportunité en finance de marché pour contribuer à des projets innovants avec motivation, adaptabilité et esprit d’équipe.
+
+\section{FORMATION}
+
+\subsection{Institut National de Statistique et d'Économie Appliquée \hfill Rabat, Maroc}
+\subsubsection{Ingénieur en Actuariat et Finance Quantitative \dotfill Octobre 2021 - Juillet 2024}
+\begin{itemize}
+\item \textbf{Cours Pertinents :} Économétrie, Calcul Stochastique, Méthodes Quantitatives, Théorie des Risques, Méthodes Statistiques en Finance, Produits à Revenu Fixe, et Marchés Financières.
+\item \textbf{Sujets Pertinents\ \ \  :} Optimisation, Modélisation Linéaire, Non-linéaire, et Séries Temporelles.
+\end{itemize}
+
+\subsection{Classes Préparatoires aux Grandes Écoles  \hfill Salé, Maroc}
+\subsubsection{Mathématiques et Physique \dotfill Septembre 2019 - Juillet 2021}
+\begin{itemize}
+\item \textbf{Cours Pertinents :} Mathématiques et Programmation en Python.
+
+\end{itemize}
+
+\section{Expérience}
+
+\subsection{La Marocaine Vie \hfill Casablanca, Maroc}
+\subsubsection{Stagiaire Actuaire \dotfill Février 2024 Juillet 2024}
+\begin{itemize}
+\item Mise en œuvre de la norme IFRS 17 sur les contrats de cession pour le produit d'assurance vie (décès emprunteur).
+\item Création du compte de résultat et analyse P\&L (identification des leviers de pilotage).
+\end{itemize}
+
+\subsection{Financial Risk Solution \hfill Casablanca, Maroc}
+
+% \subsubsection{Stagiaire Actuaire \dotfill Juillet 2023 - Août 2023 }
+% \begin{itemize}
+% \item Calcul des provisions techniques pour un RC automobile. 
+% \item Automation avec R shiny. 
+% \end{itemize}
+
+\subsubsection{Stagiaire risk manager \dotfill Juillet 2023 - Août 2023}
+\begin{itemize}  
+\item Développement d'un pricer obligataire, valorisation d'un portefeuille et estimation de la Value-at-Risk en appliquant les approches historique, paramétrique et par simulation Monte Carlo.  
+\item Calibration du modèle HJM sur les taux instantanés à terme à partir des \href{https://www.federalreserve.gov/econres/feds/the-us-treasury-yield-curve-1961-to-the-present.htm}{données du Trésor américain} (2000-2015). 
+\end{itemize}  
+\section{Projets}
+
+\subsubsection{Back-Testing des stratégies de trading \dotfill Novembre 2024} 
+\begin{itemize}
+    \item Développement et implémentation de stratégies de trading quantitatives.
+    \item Utilisation de la bibliothèque Python Backtrader pour tester ces stratégies sur des données financières historiques et évaluer leurs performances.
+\end{itemize}
+
+\subsubsection{Bibliothèque Python pour la Simulation Stochastique et l'Inférence Statistique\dotfill Juillet 2024}
+\begin{itemize}
+    \item Développer une structure de données adaptée aux séries temporelles.
+    \item Définir un classes de processus de diffusion. Avec des méthodes de simulation d'Euler et d'estimation par EMV.
+\end{itemize}
+\subsubsection{Valorisation des options asiatiques\dotfill Avril 2024}
+\begin{itemize}
+    \item Estimation par Maximum de Vraisemblance du modèle B\&S pour les \href{https://finance.yahoo.com/quote/%5EGSPC/history/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuYmluZy5jb20v&guce_referrer_sig=AQAAAByyn_GECqYcXOrWFLKtyGQo5m2JjzKaKExd6qyo5mT8gAwizQTk2ASdbejhOo07u7BXzwpLn2Cr18_4p1aULBULOODF5u-_CurLgugaw6pOYgzSUStIo-j7PsSCra3c2e82z4tYmHJHFCGxOgOVVz1MSZALLY94PvUWeByVuRbd&filter=history&period1=1262304000&period2=1577836800}{données S\&P 500 de 2010 à 2020}.
+    \item Valorisation des options asiatiques basée sur la Simulation Monte Carlo et l'EDP de Rogers-Shi.
+\end{itemize}
+
+
+\section{Compétences}
+% \vspace{-20pt}
+
+\subsection{Langues}
+Arabe : Fluent \hfill Français : Avancé \hfill Anglais : Intermédiaire \hspace{2cm}
+
+
+\subsection{Compétences Techniques}
+\begin{itemize}
+\item  \textbf{Langages de Programmation :} Python, R, VBA EXCEL, SAS, C++, SQL
+\item  \textbf{Ingénierie Financière :} Gestion des Risques, Tarification des Produits Dérivés, Produits de Taux Fixe et modélisation de la Courbe des Taux, Optimisation de Portefeuille
+\item  \textbf{Analyse Statistique :} Analyse de Régression, Prévisions de Séries Temporelles (ARIMA, SARIMA...), Tests Statistiques.
+\end{itemize}
+
+\subsection{Compétences Interpersonnelles}
+Pensée Analytique, Résolution de Problèmes, Communication, Travail en Équipe.
+
+\end{document}

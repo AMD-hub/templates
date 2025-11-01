@@ -1,0 +1,109 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\begin{minipage}[c]{0.20\textwidth}
+    
+\begin{tikzpicture}
+    \node at (0,0) [draw=colorr, fill=colorr, line width=2pt, circle, minimum width=\linewidth, path picture={
+        \node at (path picture bounding box.center) {\includegraphics[width=\linewidth]{\photoLink}};
+    }] {};
+\end{tikzpicture}
+
+\end{minipage}
+\vspace{10pt}
+\hfill
+\begin{minipage}[c]{0.78\textwidth}
+\begin{itemize}[itemsep=0.2cm, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item[] \textbf{\Huge{ \textbf{\uppercase{\Name}}}}
+    \item[] \textbf{\Huge{ \textbf{\uppercase{\job}}}}
+\end{itemize}
+\hspace{1cm}
+
+\begin{tabular}{rlrlrl}
+    \textcolor{colorr}{\faPhone} & \textbf{\phoneNumber} &
+    \textcolor{colorr}{\faGithub} &       \textbf{\githubName} &
+    \textcolor{colorr}{\faMapMarker} & \textbf{\locationEng} \\
+    \textcolor{colorr}{\faAt} & \href{\email}{\textbf{\email}} &
+    \textcolor{colorr}{\faLinkedin} & \href{\linkedinLink}{\textbf{\linkedinName}} &     \textcolor{colorr}{\faBirthdayCake} & \textbf{\birthdayDate} 
+\end{tabular}
+
+\end{minipage}
+
+\section{ABOUT ME}
+Quantitative and actuarial engineer with expertise in stochastic modeling, derivative pricing, and risk management. Interested in applying  Stochastic Process theory to develop advanced pricing and risk assessment models in finance.
+
+\section{EXPERIENCE}
+\subsection{AtlantaSanad Insurance \hfill Casablanca, Morocco}
+\subsubsection{No-Life Actuary \dotfill January 2025 -- Now}
+\begin{itemize}
+\item Developping actuarial Information System. 
+\item Developping Actuarial reporting and Pricing Auto insurance.
+\end{itemize}
+
+\subsection{La Marocaine Vie \hfill Casablanca, Morocco}
+\subsubsection{Life Actuary Intern \dotfill February 2024 -- July 2024}
+\begin{itemize}
+\item Implemented IFRS 17 standards on reinsurance contracts for life insurance products (borrower death coverage).
+\item Designed the income statement and performed P\&L analysis to identify key levers.
+\end{itemize}
+
+\subsection{Financial Risk Solution \hfill Casablanca, Morocco}
+\subsubsection{Risk Management Intern \dotfill July 2023 -- August 2023}
+\begin{itemize}
+\item Developed a bond pricer, valued a portfolio, and estimated Value-at-Risk.
+\item Calibrated the HJM model for instantaneous forward rates using \href{https://www.federalreserve.gov/econres/feds/the-us-treasury-yield-curve-1961-to-the-present.htm}{U.S. Treasury data} (2000--2015).
+\end{itemize}
+
+\section{PROJECTS}
+
+\subsubsection{Backtesting Trading Strategies \dotfill November 2024}
+\begin{itemize}
+    \item Developed and implemented quantitative trading strategies.
+    \item Used the Python library \textbf{Backtrader} to test these strategies on historical financial data and evaluate their performance.
+\end{itemize}
+
+\subsubsection{Python Library for Stochastic Simulation and Statistical Inference \dotfill July 2024}
+\begin{itemize}
+    \item Designed a data structure tailored for time series analysis.
+    \item Developed diffusion process classes with Euler simulation methods and Maximum Likelihood Estimation (MLE).
+\end{itemize}
+
+\subsubsection{Valuation of Asian Options \dotfill April 2024}
+\begin{itemize}
+    \item Estimated the Black-Scholes model parameters using MLE on \href{https://finance.yahoo.com/quote/%5EGSPC/history/}{S\&P 500 data} (2010--2020).
+    \item Valued Asian options through Monte Carlo simulation and the Rogers-Shi PDE approach.
+\end{itemize}
+
+
+\section{EDUCATION}
+
+\subsection{National Institute of Statistics and Applied Economics (INSEA) \hfill Rabat, Morocco}
+\subsubsection{Actuarial and Quantitative Finance Engineer \dotfill October 2021 -- July 2024}
+\begin{itemize}
+\item \textbf{Relevant Courses:} Econometrics, Stochastic Calculus, Quantitative Methods, Risk Theory, Statistical Methods in Finance, Fixed-Income Products, and Financial Markets, Linear and Nonlinear Modeling, and Time Series Analysis.
+\end{itemize}
+
+\subsection{Preparatory Classes for Grandes Écoles \hfill Salé, Morocco}
+\subsubsection{Mathematics and Physics \dotfill September 2019 -- July 2021}
+\begin{itemize}
+\item \textbf{Relevant Courses:} Mathematics and Python Programming.
+\end{itemize}
+
+
+\section{SKILLS}
+
+\subsection{Languages}
+Arabic: Fluent \hfill French: Advanced \hfill English: Intermediate \hspace{2cm}
+
+\subsection{Technical Skills}
+\begin{itemize}
+\item \textbf{Programming Languages:} Python, R, VBA Excel, SAS, C++, SQL
+\item \textbf{Financial Engineering:} Risk Management, Derivative Pricing, Fixed-Income Products and Yield Curve Modeling, Portfolio Optimization
+\item \textbf{Statistical Analysis:} Regression Analysis, Time Series Forecasting (ARIMA, SARIMA, etc.), Statistical Testing
+\end{itemize}
+
+\subsection{Interpersonal Skills}
+Analytical Thinking, Problem Solving, Communication, Teamwork
+
+\end{document}
