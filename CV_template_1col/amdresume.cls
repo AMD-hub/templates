@@ -122,8 +122,16 @@
 % ============================================================
 \RequirePackage{graphicx}
 \RequirePackage{multicol}
-\RequirePackage{hyperref}
-\RequirePackage{fontawesome}
+\RequirePackage[colorlinks=true,
+    linkcolor=colorr,
+    citecolor=colorr,
+    urlcolor= colorr
+]{hyperref}
+
+\RequirePackage{fontawesome5}
 \RequirePackage{paracol}
+\RequirePackage{dashrule}
+\RequirePackage{skak}
+\newcommand{\divider}{\textcolor{black!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
 
 % ============================
